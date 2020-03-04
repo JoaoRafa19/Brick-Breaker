@@ -16,10 +16,10 @@ clock = pygame.time.Clock()
 bricks = []
 for i in range(16):
     bricks.append(Brick(i*25,0, 1))
-for i in range(0, 400, 22):
-    bricks.append(Brick(i, 25, 0))
-for i in range(0, 400, 22):
-    bricks.append(Brick(i, 50, 3))
+for i in range(16):
+    bricks.append(Brick(i*25,25, 0))
+for i in range(16):
+    bricks.append(Brick(i*25,50, 3))
     
     
 def Draw():
@@ -66,7 +66,7 @@ while not lose:
     ball.move()
     
     win = False
-    if breacked >= 16:
+    if breacked >= 48:
         win = True
         ball.speed_x = 0
         ball.speed_y = 0
