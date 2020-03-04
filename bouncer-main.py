@@ -32,7 +32,7 @@ def Draw():
 
 lose = False
 
-breaked = 0
+breacked = 0
 
 while not lose:
     
@@ -58,7 +58,7 @@ while not lose:
                 ball.speed_y = ball.speed_y * -1
             
                 bricks[i].verifica = False
-                breaked += 1
+                breacked += 1
                 
     if ball.rect.bottom == 400:
         lose = True
@@ -66,7 +66,7 @@ while not lose:
     ball.move()
     
     win = False
-    if breaked >= 16:
+    if breacked >= 16:
         win = True
         ball.speed_x = 0
         ball.speed_y = 0
